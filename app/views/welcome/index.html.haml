@@ -1,3 +1,13 @@
-%h1.ui.header Hello World
+.column
+  %h1 Board Games
 
-.ui.button Follow
+.column
+  .ui.three.items
+    - @games.each do |game|
+      .item
+        .image
+          = image_tag game.thumb, alt: game.name
+        .content
+          .name= game.name
+          .description= game.desc
+          .extra #{rand(1..10)} votes

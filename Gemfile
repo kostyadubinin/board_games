@@ -28,7 +28,11 @@ gem 'haml-rails'
 gem 'semantic-ui-sass'
 
 # tools
-gem 'quiet_assets', group: :development
+group :development do
+  gem 'quiet_assets'
+  gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger'
+  gem 'pry-byebug'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

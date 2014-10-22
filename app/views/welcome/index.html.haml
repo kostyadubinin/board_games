@@ -6,8 +6,12 @@
     - @games.each do |game|
       .item
         .image
-          = image_tag game.thumb, alt: game.name
+          = image_tag game.image, alt: game.name
         .content
           .name= game.name
-          .description= game.desc
-          .extra #{rand(1..10)} votes
+          .description= game.description
+          .extra
+            %i.users.icon
+            %span #{game.players_min} - #{game.players_max}
+            %i.time.icon
+            %span #{game.playing_time_min} - #{game.playing_time_max}

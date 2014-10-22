@@ -19,5 +19,9 @@ module BoardGames
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # TODO: Handle adding app/uploaders/ to the autoload_path.
+    #   See https://github.com/carrierwaveuploader/carrierwave/issues/399
+    config.autoload_paths += Dir[Rails.root.join("app", "uploaders")]
   end
 end

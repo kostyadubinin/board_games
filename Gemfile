@@ -27,6 +27,9 @@ gem 'haml-rails'
 # front-end
 gem 'semantic-ui-sass'
 
+# tools
+gem 'quiet_assets', group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

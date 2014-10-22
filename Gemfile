@@ -25,6 +25,7 @@ end
 gem 'haml-rails'
 gem 'carrierwave'
 gem 'semantic-ui-sass'
+gem 'draper'
 
 # tools
 group :development do

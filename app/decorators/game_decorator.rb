@@ -2,9 +2,11 @@ class GameDecorator < Draper::Decorator
   delegate_all
 
   def playing_time
-    min = object.playing_time_min / 60
-    max = object.playing_time_max / 60
-    "#{min} - #{max}"
+    if object.playing_time_min == object.playing_time_max
+      object.playing_time_max / 60
+    else
+      "#{object.playing_time_min / 60} - #{object.playing_time_max / 60}"
+    end
   end
 
   # Define presentation-specific methods here. Helpers are accessed through

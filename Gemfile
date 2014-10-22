@@ -23,8 +23,7 @@ group :development, :test do
 end
 
 gem 'haml-rails'
-
-# front-end
+gem 'carrierwave'
 gem 'semantic-ui-sass'
 
 # tools

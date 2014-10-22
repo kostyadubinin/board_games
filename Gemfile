@@ -24,6 +24,9 @@ end
 
 gem 'haml-rails'
 
+# front-end
+gem 'semantic-ui-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

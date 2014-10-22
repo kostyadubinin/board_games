@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.all.decorate
   end
 end

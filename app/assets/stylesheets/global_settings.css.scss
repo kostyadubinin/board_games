@@ -20,3 +20,8 @@ a {
 a:hover {
   color: #00BAFF;
 }
+
+// fix height for the item view
+.ui.items > .item {
+  min-height: 393px;
+}

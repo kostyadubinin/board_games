@@ -2,7 +2,7 @@
   - @games.each do |game|
     .item
       .image
-        = image_tag game.image, alt: game.name
+        = image_tag game.image_url(:thumb), alt: game.name
       .content
         .name= game.name
         .description= game.description

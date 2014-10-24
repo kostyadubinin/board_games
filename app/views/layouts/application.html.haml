@@ -8,4 +8,9 @@
     = csrf_meta_tags
   %body
     .ui.one.column.page.grid
-      = yield
+      .column
+        = render 'shared/header'
+      .column
+        = yield
+      .center.aligned.column
+        = render 'shared/footer'

@@ -1,20 +1,14 @@
-.column
-  %h1.ui.black.block.header
-    Board Games
-    .sub.header Search the best games by number of players or playing time.
-
-.column
-  .ui.three.items
-    - @games.each do |game|
-      .item
-        .image
-          = image_tag game.image, alt: game.name
-        .content
-          .name= game.name
-          .description= game.description
-          .extra
-            %i.users.icon
-            %span #{game.players_min} - #{game.players_max}
-            %span.right.floated
-              %i.time.icon
-              %span #{game.playing_time} min
+.ui.three.items
+  - @games.each do |game|
+    .item
+      .image
+        = image_tag game.image, alt: game.name
+      .content
+        .name= game.name
+        .description= game.description
+        .extra
+          %i.users.icon
+          %span #{game.players_min} - #{game.players_max}
+          %span.right.floated
+            %i.time.icon
+            %span #{game.playing_time} min

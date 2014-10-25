@@ -11,3 +11,8 @@
     %tr
       %td Playing time
       %td= @game.playing_time
+    %tr
+      %td Website
+      %td
+        = link_to_if @game.website, external_url_icon, @game.website, target: "_blank" do
+          \

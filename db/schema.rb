@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022214205) do
+ActiveRecord::Schema.define(version: 20141025175319) do
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20141022214205) do
     t.datetime "updated_at"
     t.integer  "playing_time_min"
     t.integer  "playing_time_max"
+    t.datetime "published_at"
+    t.string   "website"
+    t.string   "bgg_link"
+    t.string   "wikipedia_link"
   end
 
 end

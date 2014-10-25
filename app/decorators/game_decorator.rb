@@ -2,10 +2,16 @@ class GameDecorator < Draper::Decorator
   delegate_all
 
   def playing_time
-    if object.playing_time_min == object.playing_time_max
-      object.playing_time_max / 60
+    h.distance_of_time_in_words(
+      (object.playing_time_min + object.playing_time_max) / 2
+    )
+  end
+
+  def number_of_players
+    if object.players_min == object.players_max
+      object.players_min
     else
-      "#{object.playing_time_min / 60} - #{object.playing_time_max / 60}"
+      "#{object.players_min} - #{object.players_max}"
     end
   end
 

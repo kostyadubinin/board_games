@@ -1,6 +1,6 @@
 .ui.inverted.teal.block.header= @game.name
 
-= image_tag @game.image, class: 'ui right floated large image'
+= image_tag @game.image, alt: @game.name, class: 'ui right floated large image'
 %p= @game.description
 
 %table.ui.compact.collapsing.basic.definition.table.segment

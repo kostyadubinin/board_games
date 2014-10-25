@@ -1,0 +1,13 @@
+.ui.inverted.teal.block.header= @game.name
+
+= image_tag @game.image, class: 'ui right floated large image'
+%p= @game.description
+
+%table.ui.compact.collapsing.basic.definition.table.segment
+  %tbody
+    %tr
+      %td Number of Players
+      %td= @game.number_of_players
+    %tr
+      %td Playing time
+      %td= @game.playing_time

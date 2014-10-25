@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :games, only: "index"
+  resources :games, only: %w(index show)
   root "games#index"
 
   # Example of regular route:

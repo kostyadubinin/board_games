@@ -1,18 +1,14 @@
-.column
-  %h1 Board Games
-
-.column
-  .ui.three.items
-    - @games.each do |game|
-      .item
-        .image
-          = image_tag game.image, alt: game.name
-        .content
-          .name= game.name
-          .description= game.description
-          .extra
-            %i.users.icon
-            %span #{game.players_min} - #{game.players_max}
-            %span.right.floated
-              %i.time.icon
-              %span #{game.playing_time} min
+.ui.three.items
+  - @games.each do |game|
+    .item
+      .image
+        = image_tag game.image_url(:thumb), alt: game.name
+      .content
+        .name= game.name
+        .description= game.description
+        .extra
+          %i.user.icon
+          %span #{game.players_min} - #{game.players_max}
+          %span.right.floated
+            %i.time.icon
+            %span #{game.playing_time} min

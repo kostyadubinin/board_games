@@ -22,9 +22,14 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# front-end
 gem 'haml-rails'
-gem 'carrierwave'
 gem 'semantic-ui-sass'
+
+# images
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'draper'
 
 # tools

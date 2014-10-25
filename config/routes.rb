@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  resources :games, only: "index"
+  root "games#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

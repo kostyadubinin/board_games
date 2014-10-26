@@ -11,7 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'spring', group: :development
+# Commented due to some issues with Figaro
+# gem 'spring', group: :development
 
 group :production do
   gem 'pg'
@@ -22,15 +23,17 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'draper'
+gem 'figaro'
+
 # front-end
 gem 'haml-rails'
 gem 'semantic-ui-sass'
 
 # images
-gem 'carrierwave'
+gem 'fog'
 gem 'mini_magick'
-
-gem 'draper'
+gem 'carrierwave'
 
 # tools
 group :development do

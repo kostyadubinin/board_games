@@ -1,3 +1,6 @@
+RAILS_ADMIN_LOGIN: user
+RAILS_ADMIN_PASSWORD: changeme
+
 production:
   GOOGLE_ACCESS_KEY: "ghg3uh45kj3h45jk3h5kj3h"
   GOOGLE_SECRET_KEY: "j3h45kjh34j5h3h5j3h53h5"

@@ -3,7 +3,7 @@
 = image_tag @game.image, alt: @game.name, class: 'ui right floated large image'
 %p= @game.description
 
-%table.ui.compact.collapsing.basic.definition.table.segment
+%table#game-info.ui.compact.collapsing.basic.definition.table.segment
   %tbody
     %tr
       %td Number of Players
@@ -13,6 +13,4 @@
       %td= @game.playing_time
     %tr
       %td Website
-      %td
-        = link_to_if @game.website, external_url_icon, @game.website, target: "_blank" do
-          \
+      %td= @game.website_link

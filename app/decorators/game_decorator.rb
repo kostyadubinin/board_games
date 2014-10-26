@@ -1,26 +1,40 @@
+# TODO: Write the documentation for the methods
+# TODO: Write tests before going any further
 class GameDecorator < Draper::Decorator
   delegate_all
 
   def playing_time
-    h.distance_of_time_in_words(
-      (object.playing_time_min + object.playing_time_max) / 2
-    )
-  end
+    min, max = object.playing_time_min, object.playing_time_max
 
-  def number_of_players
-    if object.players_min == object.players_max
-      object.players_min
-    else
-      "#{object.players_min} - #{object.players_max}"
+    handle_none min, max do
+      h.distance_of_time_in_words([min, max].compact.sum / [min, max].compact.size)
     end
   end
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+  def number_of_players
+    min, max = object.players_min, object.players_max
+
+    handle_none min, max do
+      return [min, max].compact.max if [min, max].compact.size == 1
+      min == max ? min : "#{min} - #{max}"
+    end
+  end
+
+  def website_link
+    handle_none object.website do
+      h.link_to object.website, target: "_blank" do
+        h.content_tag(:i, nil, class: "external url icon")
+      end
+    end
+  end
+
+  private
+
+  def handle_none(*values)
+    if values.any?(&:present?)
+      yield
+    else
+      h.content_tag(:span, "n/a", class: "disabled")
+    end
+  end
 end

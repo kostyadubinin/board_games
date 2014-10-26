@@ -1,4 +1,7 @@
+RAILS_ADMIN_LOGIN: user
+RAILS_ADMIN_PASSWORD: changeme
+
 production:
-  google_access_key: "ghg3uh45kj3h45jk3h5kj3h"
-  google_secret_key: "j3h45kjh34j5h3h5j3h53h5"
-  google_bucket: "images"
+  GOOGLE_ACCESS_KEY: "ghg3uh45kj3h45jk3h5kj3h"
+  GOOGLE_SECRET_KEY: "j3h45kjh34j5h3h5j3h53h5"
+  GOOGLE_BUCKET: "images"

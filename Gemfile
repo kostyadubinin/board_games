@@ -35,6 +35,8 @@ gem 'fog'
 gem 'mini_magick'
 gem 'carrierwave'
 
+gem 'rails_admin'
+
 # tools
 group :development do
   gem 'quiet_assets'

@@ -31,8 +31,9 @@ gem 'haml-rails'
 gem 'semantic-ui-sass'
 
 # images
-gem 'carrierwave'
+gem 'fog'
 gem 'mini_magick'
+gem 'carrierwave'
 
 # tools
 group :development do

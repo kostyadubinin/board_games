@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all.decorate
+    @games = Game.page(params[:page]).decorate
   end
 
   def show

@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => "/admin", as: "rails_admin"
 
-  resources :games, only: %w(index show)
+  ## concerns
+  concern :paginatable do
+    get "(page/:page)", action: :index, on: :collection, as: ""
+  end
+
+  ## routes
+  resources :games, only: %w(index show), concerns: :paginatable
   root "games#index"
 
   # Example of regular route:

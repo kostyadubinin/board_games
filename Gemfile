@@ -29,6 +29,7 @@ gem 'figaro'
 # front-end
 gem 'haml-rails'
 gem 'semantic-ui-sass'
+gem 'kaminari'
 
 # images
 gem 'fog'

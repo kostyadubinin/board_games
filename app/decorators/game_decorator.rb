@@ -1,7 +1,7 @@
 # TODO: Write the documentation for the methods
 # TODO: Write tests before going any further
 class GameDecorator < Draper::Decorator
-  delegate_all
+  delegate :name, :image, :description, :image_url
 
   def playing_time
     min, max = object.playing_time_min, object.playing_time_max
@@ -25,6 +25,18 @@ class GameDecorator < Draper::Decorator
       h.link_to object.website, target: "_blank" do
         h.content_tag(:i, nil, class: "external url icon")
       end
+    end
+  end
+
+  def suggested_age
+    handle_none object.age do
+      "#{object.age}+"
+    end
+  end
+
+  def year_published
+    handle_none object.published_at do
+      object.published_at.strftime("%Y")
     end
   end
 

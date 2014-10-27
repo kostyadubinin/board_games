@@ -1,0 +1,12 @@
+= link_to game, class: "item" do
+  .image
+    = image_tag game.image_url(:thumb), alt: game.name
+  .content
+    .name= game.name
+    .description= game.description
+    .extra
+      %i.user.icon
+      %span= game.number_of_players
+      %span.right.floated
+        %i.time.icon
+        %span= game.playing_time

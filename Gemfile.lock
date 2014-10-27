@@ -282,6 +282,7 @@ DEPENDENCIES
   jazz_hands!
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mini_magick
   pg
   pry-byebug

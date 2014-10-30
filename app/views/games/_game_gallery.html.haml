@@ -1,0 +1,6 @@
+= link_to game.main_picture.image_url, rel: game.name, class: "fancybox" do
+  = image_tag game.main_picture.image, alt: game.name, class: 'ui inline-block image'
+.hidden
+  - game.gallery_pictures.each do |picture|
+    = link_to picture.image_url, rel: game.name, class: "fancybox" do
+      = image_tag picture.image_url(:thumb), alt: game.name, class: "ui small image"

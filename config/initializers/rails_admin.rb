@@ -8,7 +8,7 @@ RailsAdmin.config do |config|
   config.model "Picture" do
     edit do
       field :remote_image_url
-      afield :game
+      field :game
     end
   end
 

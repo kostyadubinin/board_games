@@ -1,6 +1,6 @@
 = link_to game, class: "item" do
   .image
-    = image_tag game.image_url(:thumb), alt: game.name
+    = image_tag game.main_picture.image_url(:thumb), alt: game.name
   .content
     .name= game.name
     .description= game.description

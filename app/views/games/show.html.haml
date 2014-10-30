@@ -1,23 +1,17 @@
 .column
   .ui.inverted.teal.block.header= @game.name
 
-  = image_tag @game.image, alt: @game.name, class: 'ui right floated large image'
+.eight.wide.column
   %p= @game.description
+  = render 'game_info_table'
 
-  %table#game-info.ui.compact.collapsing.basic.definition.table.segment
-    %tbody
-      %tr
-        %td Number of Players
-        %td= @game.number_of_players
-      %tr
-        %td Playing time
-        %td= @game.playing_time
-      %tr
-        %td Age
-        %td= @game.suggested_age
-      %tr
-        %td Year Published
-        %td= @game.year_published
-      %tr
-        %td Website
-        %td= @game.website_link
+.eight.wide.center.aligned.column
+  = link_to @game.image_url, rel: @game.name, class: "fancybox" do
+    = image_tag @game.image, alt: @game.name, class: 'ui inline-block image'
+  .hidden
+    - @game.pictures.each do |picture|
+      = link_to picture.image_url, rel: @game.name, class: "fancybox" do
+        = image_tag picture.image_url(:thumb), alt: @game.name, class: "ui small image"
+
+:coffee
+  $(".fancybox").fancybox()

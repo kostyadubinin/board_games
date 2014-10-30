@@ -30,6 +30,8 @@ gem 'figaro'
 gem 'haml-rails'
 gem 'semantic-ui-sass'
 gem 'kaminari'
+gem 'fancybox2-rails'
+gem 'jquery-turbolinks'
 
 # images
 gem 'fog'

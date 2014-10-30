@@ -1,7 +1,8 @@
 # TODO: Write the documentation for the methods
 # TODO: Write tests before going any further
 class GameDecorator < Draper::Decorator
-  delegate :name, :image, :description, :image_url
+  # TODO: Remove :image.
+  delegate :name, :image, :description, :image_url, :pictures
 
   def playing_time
     min, max = object.playing_time_min, object.playing_time_max

@@ -5,20 +5,10 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model "Game" do
+  config.model "Picture" do
     edit do
-      field :name
       field :remote_image_url
-      field :description
-
-      field :players_min
-      field :players_max
-
-      field :playing_time_min
-      field :playing_time_max
-
-      field :age
-      field :website
+      afield :game
     end
   end
 

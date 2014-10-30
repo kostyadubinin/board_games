@@ -1,5 +1,13 @@
+.hidden {
+  display: none;
+}
+
 #game-info {
   span.disabled {
     opacity: 0.5;
   }
+}
+
+.ui.inline-block.image {
+  display: inline-block;
 }

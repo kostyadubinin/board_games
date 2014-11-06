@@ -3,6 +3,11 @@ body {
   background-image: url(image_path('rockywall.png'));
 }
 
+// Make text not so dark. Copied from the official Semantic Ui site.
+body {
+  color: #555555;
+}
+
 // font
 body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;

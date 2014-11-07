@@ -44,7 +44,7 @@ class GameDecorator < Draper::Decorator
 
   def year_published
     handle_none object.published_at do
-      object.published_at.strftime("%Y")
+      object.published_at
     end
   end
 

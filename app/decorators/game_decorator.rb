@@ -1,7 +1,7 @@
 # TODO: Write the documentation for the methods
 # TODO: Write tests before going any further
 class GameDecorator < Draper::Decorator
-  delegate :name, :description
+  delegate :name, :description, :published_at
 
   def main_picture
     object.pictures.first
@@ -39,12 +39,6 @@ class GameDecorator < Draper::Decorator
   def suggested_age
     handle_none object.age do
       "#{object.age}+"
-    end
-  end
-
-  def year_published
-    handle_none object.published_at do
-      object.published_at.strftime("%Y")
     end
   end
 

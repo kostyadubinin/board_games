@@ -28,6 +28,7 @@ gem 'figaro'
 
 # front-end
 gem 'haml-rails'
+gem 'active_link_to'
 gem 'semantic-ui-sass'
 gem 'kaminari'
 gem 'fancybox2-rails'

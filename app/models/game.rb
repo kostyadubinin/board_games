@@ -5,6 +5,14 @@ class Game < ActiveRecord::Base
   has_many :pictures
   validates :name, presence: true
 
+  def self.order_by_players(direction)
+    order(players_min: direction, players_max: direction)
+  end
+
+  def self.order_by_playing_time(direction)
+    order(playing_time_min: direction, playing_time_max: direction)
+  end
+
   rails_admin do
     list do
       configure :id do

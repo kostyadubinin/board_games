@@ -29,11 +29,15 @@ class GameDecorator < Draper::Decorator
   end
 
   def website_link
-    handle_none object.website do
-      h.link_to object.website, target: "_blank" do
-        h.content_tag(:i, nil, class: "external url icon")
-      end
-    end
+    link(object.website)
+  end
+
+  def wikipedia_link
+    link(object.wikipedia_link)
+  end
+
+  def bgg_link
+    link(object.bgg_link)
   end
 
   def suggested_age
@@ -49,6 +53,14 @@ class GameDecorator < Draper::Decorator
   end
 
   private
+
+  def link(url)
+    handle_none url do
+      h.link_to url, target: "_blank" do
+        h.content_tag(:i, nil, class: "external url icon")
+      end
+    end
+  end
 
   def handle_none(*values)
     if values.any?(&:present?)

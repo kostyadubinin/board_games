@@ -50,8 +50,7 @@ class Game < ActiveRecord::Base
     end
 
     edit do
-      exclude_fields :created_at, :updated_at, :website, :bgg_link,
-        :wikipedia_link
+      exclude_fields :created_at, :updated_at
     end
   end
 end

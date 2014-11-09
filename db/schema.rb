@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109202450) do
+ActiveRecord::Schema.define(version: 20141109230631) do
 
   create_table "games", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141109202450) do
     t.string   "wikipedia_link"
     t.integer  "published_at"
     t.string   "chuvachi_link"
+    t.string   "youtube_link"
   end
 
   create_table "pictures", force: true do |t|

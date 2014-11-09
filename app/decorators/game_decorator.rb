@@ -28,6 +28,14 @@ class GameDecorator < Draper::Decorator
     end
   end
 
+  def embed_youtube_url
+    return nil unless object.youtube_link
+
+    uri = URI.parse(object.youtube_link)
+    id = CGI.parse(uri.query)["v"][0]
+    "//www.youtube.com/embed/#{id}"
+  end
+
   def website_link
     link(object.website)
   end

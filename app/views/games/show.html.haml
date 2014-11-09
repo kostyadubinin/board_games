@@ -11,5 +11,7 @@
   .center.aligned.column
     = render 'game_gallery', game: @game
 
+= render "youtube_video", url: @game.embed_youtube_url
+
 :coffee
   $(".fancybox").fancybox()

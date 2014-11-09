@@ -1,7 +1,7 @@
 # TODO: Write the documentation for the methods
 # TODO: Write tests before going any further
 class GameDecorator < Draper::Decorator
-  delegate :name, :description
+  delegate :name, :description, :chuvachi_link
 
   def main_picture
     object.pictures.first

@@ -6,9 +6,6 @@
 
     = csrf_meta_tags
   %body
-    .ui.one.column.page.grid
-      .column
-        = render 'shared/header'
-      = yield
-      .center.aligned.column
-        = render 'shared/footer'
+    = render 'shared/header'
+    = yield
+    = render 'shared/footer'

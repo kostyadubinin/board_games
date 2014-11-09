@@ -1,8 +1,9 @@
-.sixteen.wide.column
-  = render "sorting_controls"
+.ui.page.grid
+  .column
+    = render "sorting_controls"
 
-  .ui.three.items
-    = render @games
+    .ui.three.items
+      = render @games
 
-.sixteen.wide.center.aligned.column
-  = paginate @games
+    .center.aligned.column
+      = paginate @games

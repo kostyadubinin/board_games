@@ -1,13 +1,15 @@
-.column
-  .ui.inverted.teal.block.header= @game.name
+.ui.page.grid
+  .column
+    .ui.inverted.teal.block.header= @game.name
 
-.eight.wide.column
-  %p= @game.description
-  = render 'game_info_table'
-  = render 'buy_button', url: @game.chuvachi_link
+.ui.two.column.page.grid
+  .column
+    %p= @game.description
+    = render 'game_info_table'
+    = render 'buy_button', url: @game.chuvachi_link
 
-.eight.wide.center.aligned.column
-  = render 'game_gallery', game: @game
+  .center.aligned.column
+    = render 'game_gallery', game: @game
 
 :coffee
   $(".fancybox").fancybox()

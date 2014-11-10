@@ -29,11 +29,24 @@ class GameDecorator < Draper::Decorator
   end
 
   def embed_youtube_url
-    return nil unless object.youtube_link
+    return nil unless object.youtube_link.present?
 
     uri = URI.parse(object.youtube_link)
     id = CGI.parse(uri.query)["v"][0]
     "//www.youtube.com/embed/#{id}"
+  end
+
+  def buy_button(options)
+    if object.chuvachi_link.present?
+      h.link_to object.chuvachi_link, options do
+        yield
+      end
+    else
+      options[:class] += " disabled"
+      h.content_tag(:div, options) do
+        yield
+      end
+    end
   end
 
   def website_link

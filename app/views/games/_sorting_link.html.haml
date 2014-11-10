@@ -1,4 +1,4 @@
 = active_link_to games_path(sorting_params_for(parameter)), class: "item", active: Regexp.new(parameter) do
   %i.icon{class: icon_class}
-  Players
+  = title
   %i.sort.icon{class: sorting_icon_for(parameter)}

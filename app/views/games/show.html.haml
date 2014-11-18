@@ -6,9 +6,7 @@
   .column
     %p= @game.description
     = render 'game_info_table'
-    = @game.buy_button target: "_blank", class: "ui primary large labeled icon button" do
-      %i.cart.icon
-      Buy
+    = render 'buy_button', game: @game
 
   .center.aligned.column
     = render 'game_gallery', game: @game
